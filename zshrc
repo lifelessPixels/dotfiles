@@ -2,6 +2,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export DEFAULT_USER=karol
+export PAGER=less
+export EDITOR=nvim
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
