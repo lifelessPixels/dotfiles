@@ -25,6 +25,8 @@
         path: rofi/
     ~/.local/share/fonts:
         path: fonts/
+    ~/.p10k.zsh:
+        path: p10k.zsh
 
 - shell:
     - fc-cache -r -v
