@@ -31,7 +31,7 @@ exec --no-startup-id "picom -b -f --backend glx"
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -47,6 +47,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # use brightnessctl to adjust screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl s --min-val=1 10%-"
 bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl s +10%"
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id "brightnessctl s --min-val=1 0%"
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id "brightnessctl s 100%"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
