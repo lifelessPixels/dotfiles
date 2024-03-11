@@ -1,12 +1,12 @@
 function close_current_and_run(command, close_target)
-	if close_target then
-		close_target = ("source=" .. close_target)
-	else
-		close_target = ''
-	end
+    if close_target then
+        close_target = ("source=" .. close_target)
+    else
+        close_target = ''
+    end
 
-	vim.cmd(':Neotree action=close ' .. close_target)
-	vim.cmd(command)
+    vim.cmd(':Neotree action=close ' .. close_target)
+    vim.cmd(command)
 end
 
 vim.keymap.set('n', '<leader>pt', function() close_current_and_run(':Neotree') end)

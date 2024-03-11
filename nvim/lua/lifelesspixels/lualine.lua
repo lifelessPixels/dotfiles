@@ -1,5 +1,5 @@
 require("lualine").setup({
-	options = {
-		globalstatus = true
-	}
+    options = {
+        globalstatus = true
+    }
 })
