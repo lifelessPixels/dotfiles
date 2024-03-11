@@ -10,7 +10,9 @@
     ~/.config/i3:
         path: i3/
     ~/.config/wallpaper.jpg: images/wallpaper.jpg
+    ~/.config/wallpaper2.jpg: images/wallpaper2.jpg
     ~/.fehbg: fehbg
+    ~/.config/nvim: nvim
     ~/.dmrc: dmrc
     ~/.gitconfig: gitconfig
     ~/.oh-my-zsh:
@@ -27,6 +29,9 @@
         path: fonts/
     ~/.p10k.zsh:
         path: p10k.zsh
-
+    ~/.config/gtk-2.0:
+        path: gtk-2.0
+    ~/.config/gtk-3.0:
+        path: gtk-3.0
 - shell:
     - fc-cache -r -v
