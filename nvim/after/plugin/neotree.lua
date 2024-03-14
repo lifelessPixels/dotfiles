@@ -1,6 +1,6 @@
 function close_current_and_run(command, close_target)
     if close_target then
-        close_target = ("source=" .. close_target)
+        close_target = ('source=' .. close_target)
     else
         close_target = ''
     end
@@ -9,7 +9,16 @@ function close_current_and_run(command, close_target)
     vim.cmd(command)
 end
 
+require('neo-tree').setup({
+    window = {
+        mappings = {
+            ['P'] = { 'toggle_preview', config = { use_float = true, use_image_nvim = true } },
+        }
+    }
+})
+
 vim.keymap.set('n', '<leader>pt', function() close_current_and_run(':Neotree') end)
 vim.keymap.set('n', '<leader>pb', function() close_current_and_run(':Neotree source=buffers action=focus') end)
 vim.keymap.set('n', '<leader>pT', function() close_current_and_run(':Neotree toggle', 'buffers') end)
-vim.keymap.set('n', '<leader>pB', function() close_current_and_run(':Neotree source=buffers toggle action=focus', 'filesystem') end)
+vim.keymap.set('n', '<leader>pB', function() close_current_and_run(':Neotree source=buffers toggle action=focus', 'filesystem')
+end)

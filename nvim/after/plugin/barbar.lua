@@ -1,3 +1,11 @@
+require("barbar").setup({
+    animation = true,
+    sidebar_filetypes = {
+        ["neo-tree"] = {event = "BufWipeout"},
+        undotree = true
+    }
+})
+
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -37,4 +45,3 @@ map('n', '<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 map('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 map('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
-

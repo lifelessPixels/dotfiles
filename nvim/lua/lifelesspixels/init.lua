@@ -1,8 +1,6 @@
-require("lifelesspixels.remap")
-require("lifelesspixels.barbar")
-require("lifelesspixels.lualine")
-require("lifelesspixels.packer")
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+vim.g.barbar_auto_setup = false;
+require("lifelesspixels.remap")
+require("lifelesspixels.packer")
