@@ -1,5 +1,6 @@
 {
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "close_current_and_run"
     ]
 }

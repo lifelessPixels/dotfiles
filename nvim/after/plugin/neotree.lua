@@ -1,15 +1,5 @@
-function close_current_and_run(command, close_target)
-    if close_target then
-        close_target = ('source=' .. close_target)
-    else
-        close_target = ''
-    end
-
-    vim.cmd(':Neotree action=close ' .. close_target)
-    vim.cmd(command)
-end
-
 require('neo-tree').setup({
+    auto_clean_after_session_restore = true,
     window = {
         mappings = {
             ['P'] = { 'toggle_preview', config = { use_float = true, use_image_nvim = true } },
@@ -17,8 +7,7 @@ require('neo-tree').setup({
     }
 })
 
-vim.keymap.set('n', '<leader>pt', function() close_current_and_run(':Neotree') end)
-vim.keymap.set('n', '<leader>pb', function() close_current_and_run(':Neotree source=buffers action=focus') end)
-vim.keymap.set('n', '<leader>pT', function() close_current_and_run(':Neotree toggle', 'buffers') end)
-vim.keymap.set('n', '<leader>pB', function() close_current_and_run(':Neotree source=buffers toggle action=focus', 'filesystem')
-end)
+vim.keymap.set('n', '<leader>pt', '<Cmd>Neotree source=filesystem<CR>')
+vim.keymap.set('n', '<leader>pb', '<Cmd>Neotree source=buffers<CR>')
+vim.keymap.set('n', '<leader>pT', '<Cmd>Neotree source=filesystem action=close<CR>')
+vim.keymap.set('n', '<leader>pB', '<Cmd>Neotree source=buffers action=close<CR>')
