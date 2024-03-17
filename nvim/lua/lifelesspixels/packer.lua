@@ -59,4 +59,5 @@ return require('packer').startup(function(use)
     use 'hrsh7th/vim-vsnip'
     use 'kylechui/nvim-surround'
     use 'folke/persistence.nvim'
+    use 'numToStr/Comment.nvim'
 end)
