@@ -38,7 +38,6 @@ return require('packer').startup(function(use)
     }
     use 'nvim-tree/nvim-web-devicons'
     use 'lewis6991/gitsigns.nvim'
-    use 'romgrk/barbar.nvim'
     use 'ThePrimeagen/vim-be-good'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
@@ -59,5 +58,6 @@ return require('packer').startup(function(use)
     use 'hrsh7th/vim-vsnip'
     use 'kylechui/nvim-surround'
     use 'folke/persistence.nvim'
+    use 'nanozuki/tabby.nvim'
     use 'numToStr/Comment.nvim'
 end)

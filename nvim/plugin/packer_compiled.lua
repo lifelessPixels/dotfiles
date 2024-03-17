@@ -74,15 +74,15 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/karol/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["autoclose.nvim"] = {
     loaded = true,
     path = "/home/karol/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
-  },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/karol/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -213,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/karol/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
     url = "https://gitlab.com/HiPhish/rainbow-delimiters.nvim"
+  },
+  ["tabby.nvim"] = {
+    loaded = true,
+    path = "/home/karol/.local/share/nvim/site/pack/packer/start/tabby.nvim",
+    url = "https://github.com/nanozuki/tabby.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
