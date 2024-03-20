@@ -5,6 +5,8 @@ require("mason-lspconfig").setup({
         "lua_ls",
         "clangd",
         "cmake",
+        "omnisharp",
+        "pylsp"
     }
 })
 
@@ -12,6 +14,18 @@ local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.cmake.setup({})
+lspconfig.omnisharp.setup({})
+lspconfig.pylsp.setup({
+    settings = {
+        pylsp = {
+            plugins = {
+                rope_autoimport = {
+                    enabled = true
+                }
+            }
+        }
+    }
+})
 
 vim.keymap.set('n', '<leader>el', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev)

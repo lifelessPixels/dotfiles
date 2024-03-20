@@ -12,6 +12,9 @@ require("formatter").setup({
         cmake = {
             require("formatter.filetypes.cmake").cmake
         },
+        csharp = {
+            require("formatter.filetypes.cs").clangformat
+        },
         ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace
         }
