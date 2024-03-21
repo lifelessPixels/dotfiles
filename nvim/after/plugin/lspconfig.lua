@@ -11,11 +11,33 @@ require("mason-lspconfig").setup({
 })
 
 local lspconfig = require("lspconfig")
-lspconfig.lua_ls.setup({})
-lspconfig.clangd.setup({})
-lspconfig.cmake.setup({})
-lspconfig.omnisharp.setup({})
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+lspconfig.lua_ls.setup({
+    capabilities = capabilities
+})
+
+lspconfig.clangd.setup({
+    capabilities = capabilities
+})
+
+lspconfig.cmake.setup({
+    capabilities = capabilities
+})
+
+lspconfig.omnisharp.setup({
+    capabilities = capabilities,
+    enable_roslyn_analysers = true,
+    enable_import_completion = true,
+    organize_imports_on_format = true,
+    enable_decompilation_support = true,
+    filetypes = {
+        'cs', 'csproj', 'sln', 'props'
+    }
+})
+
 lspconfig.pylsp.setup({
+    capabilities = capabilities,
     settings = {
         pylsp = {
             plugins = {
