@@ -42,12 +42,7 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
     use 'williamboman/mason.nvim'
-    use {
-        'williamboman/mason-lspconfig.nvim',
-        config = function()
-            vim.command("PylspInstall rope pylsp-rope pylsp-autoimport")
-        end
-    }
+    use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
     use 'stevearc/dressing.nvim'
     use 'mhartington/formatter.nvim'
