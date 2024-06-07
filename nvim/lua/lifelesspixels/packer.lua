@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
         'folke/tokyonight.nvim',
         config = function()
             vim.cmd('colorscheme tokyonight-night')
+            vim.highlight.create("LineNr", {ctermbg="white"})
         end
     }
 

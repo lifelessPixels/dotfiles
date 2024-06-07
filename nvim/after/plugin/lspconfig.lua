@@ -6,7 +6,8 @@ require("mason-lspconfig").setup({
         "clangd",
         "cmake",
         "omnisharp",
-        "pylsp"
+        "pylsp",
+        "asm_lsp"
     }
 })
 
@@ -18,7 +19,13 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.clangd.setup({
-    capabilities = capabilities
+    capabilities = capabilities,
+    cmd = {
+        "clangd",
+        "--completion-style=detailed",
+        "--function-arg-placeholders=0",
+        "--enable-config"
+    }
 })
 
 lspconfig.cmake.setup({
@@ -49,6 +56,8 @@ lspconfig.pylsp.setup({
     }
 })
 
+lspconfig.asm_lsp.setup({})
+
 vim.keymap.set('n', '<leader>el', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next)
@@ -78,9 +87,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
         vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-        vim.keymap.set('n', '<leader>f', function()
-            vim.lsp.buf.format { async = true }
-            vim.diagnostic.enable(0)
-        end, opts)
     end,
 })

@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/opt/cross/bin:$PATH"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export DEFAULT_USER=karol
 export PAGER=less
