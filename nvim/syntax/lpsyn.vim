@@ -8,7 +8,7 @@ if exists("b:current_syntax")
 endif
 
 " Comment
-syn match lpsynComment '#.*$'
+syn match lpsynComment '^#.*$'
 
 " Action
 syn keyword lpsynActionKeyword action skipwhite nextgroup=lpsynActionEquals
@@ -26,7 +26,7 @@ syn match lpsynNameEquals '=' skipwhite nextgroup=lpsynName
 syn match lpsynName '[_A-Za-z][_0-9A-Za-z]*'
 
 " Literal
-syn region lpsynLiteralString start='"' end='"'
+syn region lpsynLiteralString start='"' end='"' skip=+\\\\\|\\"+
 
 " Region
 syn region lpsynCompoundRule start='{' end='}' fold transparent

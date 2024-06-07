@@ -15,6 +15,12 @@ require("formatter").setup({
         csharp = {
             require("formatter.filetypes.cs").clangformat
         },
+        sh = {
+            require("formatter.filetypes.sh").shfmt
+        },
+        tex = {
+            require("formatter.filetypes.latex").texlab
+        },
         ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace
         }

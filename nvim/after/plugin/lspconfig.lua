@@ -7,7 +7,8 @@ require("mason-lspconfig").setup({
         "cmake",
         "omnisharp",
         "pylsp",
-        "asm_lsp"
+        "asm_lsp",
+        "texlab"
     }
 })
 
@@ -57,6 +58,8 @@ lspconfig.pylsp.setup({
 })
 
 lspconfig.asm_lsp.setup({})
+
+lspconfig.texlab.setup({})
 
 vim.keymap.set('n', '<leader>el', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev)
