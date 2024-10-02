@@ -42,7 +42,9 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/vim-be-good'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
-    use 'williamboman/mason.nvim'
+    use {
+        'williamboman/mason.nvim'
+    }
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
     use 'stevearc/dressing.nvim'
@@ -61,4 +63,5 @@ return require('packer').startup(function(use)
     use 'folke/persistence.nvim'
     use 'nanozuki/tabby.nvim'
     use 'numToStr/Comment.nvim'
+    use 'mfussenegger/nvim-jdtls'
 end)

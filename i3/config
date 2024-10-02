@@ -137,6 +137,7 @@ bindsym $mod+F2 exec --no-startup-id "google-chrome-stable --profile-directory=D
 assign [class="chrome"] $ws2
 for_window [class="chrome"] focus
 for_window [class="chrome"] fullscreen enable
+for_window [instance="royal_forge"] floating enable
 
 # open vscode and assign it to third workspace by default (and start it in fullscreen)
 bindsym $mod+F3 exec --no-startup-id "code"
