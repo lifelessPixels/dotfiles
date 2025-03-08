@@ -1,0 +1,2 @@
+LPPM TEMPLATE V1
+"make all";"git init";"git add .";"git commit -m \"@@PROJECT_NAME@@: initial commit\"";
